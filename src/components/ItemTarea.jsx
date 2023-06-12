@@ -1,8 +1,8 @@
 import { ListGroup } from "react-bootstrap";
 
-const ItemTarea = () => {
+const ItemTarea = ({tareita}) => {
     return (
-        <ListGroup.Item>ejemplo de tarea</ListGroup.Item>
+        <ListGroup.Item>{tareita}</ListGroup.Item>
     );
 };
 
