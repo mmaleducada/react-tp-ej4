@@ -8,8 +8,9 @@ const FormularioTarea = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setTareas([...tareas, tarea])
-    }
+        setTareas([...tareas, tarea]);
+        setTarea("");
+    } 
 
     return (
         <>
@@ -19,7 +20,7 @@ const FormularioTarea = () => {
                     <Button variant="info" type="submit">Agregar</Button>
                 </Form.Group>
             </Form>
-            <ListaTareas></ListaTareas>
+             <ListaTareas mostrarTareas={tareas}></ListaTareas> {/*se agrega un props al listado, donde le enviamos la informacion del state tareas (array que esta guardando todas las tareas que vienen del valor del input) */}
         </>
     );
 };
